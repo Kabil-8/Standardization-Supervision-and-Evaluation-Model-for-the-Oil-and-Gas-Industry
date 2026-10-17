@@ -1,0 +1,10 @@
+year,requested_k,actual_k,precision_at_k,recall_at_k,ranking_unit
+2022,50,50,0.72,0.06228373702422145,unique platform within year
+2022,100,100,0.69,0.11937716262975778,unique platform within year
+2022,200,200,0.695,0.24048442906574394,unique platform within year
+2023,50,50,0.76,0.059190031152647975,unique platform within year
+2023,100,100,0.71,0.11059190031152648,unique platform within year
+2023,200,200,0.7,0.21806853582554517,unique platform within year
+2024,50,50,0.6,0.09202453987730061,unique platform within year
+2024,100,100,0.53,0.16257668711656442,unique platform within year
+2024,200,200,0.485,0.29754601226993865,unique platform within year

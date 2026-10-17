@@ -1,0 +1,2 @@
+selection,objective,hidden,gru_layers,attention_heads,dropout,learning_rate,weight_decay,focal_gamma,batch_size
+locked_optuna_trial_34,0.0832876207748394,80,1,8,0.26902465735185316,0.0016173513206233661,2.4390872194884464e-05,1.752345631149382,256

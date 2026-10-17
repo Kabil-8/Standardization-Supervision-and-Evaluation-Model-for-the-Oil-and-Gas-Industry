@@ -1,0 +1,54 @@
+{
+  "model": "TECR-Net-Tuned-7Seed",
+  "sequence_length": 3,
+  "ablation_variants": [
+    "full_model"
+  ],
+  "estimand": "probability of a recorded INC in year t+1",
+  "inspection_denominator_available": false,
+  "seeds": [
+    11,
+    22,
+    33,
+    44,
+    55,
+    66,
+    77
+  ],
+  "max_epochs": 100,
+  "patience": 15,
+  "optuna_sampler_seed": 2026,
+  "tuning_seeds": [
+    101,
+    202,
+    303
+  ],
+  "tuning_max_epochs": 75,
+  "tuning_patience": 15,
+  "stability_penalty": 0.25,
+  "n_trials": 40,
+  "train_feature_years": [
+    2014,
+    2019
+  ],
+  "validation_feature_years": [
+    2020,
+    2021
+  ],
+  "test_feature_years": [
+    2022,
+    2024
+  ],
+  "selection_metric": "mean validation PR-AUC across three tuning seeds minus 0.25 times its population standard deviation",
+  "loss": "class-balanced focal loss",
+  "architecture_extensions": [
+    "learnable dynamic-feature gates",
+    "hierarchical temporal attention over all observed years",
+    "GRU temporal encoder",
+    "static and categorical encoders",
+    "cross-modality attention fusion"
+  ],
+  "calibration": "validation-only Platt scaling",
+  "threshold": "maximum validation F1",
+  "ensemble": "arithmetic mean of seven calibrated probabilities; threshold selected on validation ensemble only"
+}

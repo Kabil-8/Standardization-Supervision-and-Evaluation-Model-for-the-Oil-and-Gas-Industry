@@ -1,0 +1,26 @@
+{
+  "models": [
+    "lightgbm",
+    "catboost",
+    "tabnet"
+  ],
+  "seeds": [
+    11,
+    22,
+    33,
+    44,
+    55,
+    66,
+    77
+  ],
+  "tuning_seed": 2026,
+  "trials_per_model": 20,
+  "primary_metric": "validation PR-AUC",
+  "threshold": "maximum validation F1",
+  "sequence_length": 3,
+  "feature_set": "enhanced_supervision",
+  "source_sequence_index": "/kaggle/input/datasets/kabil908/tecrnet-7seed/bsee_tecrnet_7seed_ensemble/sequence_index.csv",
+  "expected_test_rows": 2196,
+  "expected_test_positives": 94,
+  "test_role": "evaluation only"
+}

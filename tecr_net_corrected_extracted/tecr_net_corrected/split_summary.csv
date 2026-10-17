@@ -1,0 +1,5 @@
+role,feature_years,n,positives
+inner_fit,2014-2017,9449,2267
+inner_tuning,2018-2019,3884,852
+calibration,2020-2021,3545,976
+exploratory_previously_inspected,2022-2024,4737,1546

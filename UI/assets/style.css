@@ -1,0 +1,392 @@
+/* =====================================================================
+   TECR-Net Offshore Safety & Environmental Enforcement Dashboard Styles
+   Theme: Strict Executive Light Mode
+   Colors: Crisp White, Off-White Slate, Deep Navy (#0B2545),
+           High-Seas Marine Teal (#007A78), and Muted Amber (#D97724)
+   ===================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --primary-navy: #0B2545;
+  --secondary-navy: #13315C;
+  --marine-teal: #007A78;
+  --marine-teal-hover: #006664;
+  --teal-light: #ECFDF5;
+  --teal-border: #A7F3D0;
+  --muted-orange: #D97724;
+  --amber-light: #FFFBEB;
+  --amber-border: #FDE68A;
+  --alert-red: #B91C1C;
+  --alert-red-light: #FEF2F2;
+  --alert-red-border: #FECACA;
+  --neutral-bg: #F8FAFC;
+  --card-bg: #FFFFFF;
+  --sidebar-bg: #FFFFFF;
+  --text-primary: #0F172A;
+  --text-secondary: #334155;
+  --text-muted: #64748B;
+  --border-light: #E2E8F0;
+  --border-medium: #CBD5E1;
+}
+
+/* Force Light Mode Global Background & Typography */
+html, body, [class*="css"] {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--text-primary) !important;
+  background-color: var(--neutral-bg) !important;
+}
+
+.stApp {
+  background-color: var(--neutral-bg) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Main Container Spacing */
+.block-container {
+  padding-top: 1.6rem !important;
+  padding-bottom: 3.5rem !important;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+  max-width: 1350px !important;
+}
+
+/* Executive Header Banner */
+.tecrnet-header {
+  background: linear-gradient(135deg, #0B2545 0%, #13315C 60%, #007A78 100%);
+  color: #FFFFFF !important;
+  padding: 1.8rem 2.2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(11, 37, 69, 0.08);
+  margin-bottom: 1.4rem;
+}
+
+.tecrnet-header h1 {
+  font-weight: 700;
+  font-size: 1.95rem;
+  letter-spacing: -0.025em;
+  margin: 0 0 0.4rem 0;
+  color: #FFFFFF !important;
+}
+
+.tecrnet-header p {
+  font-size: 0.94rem;
+  color: #E2E8F0 !important;
+  margin: 0;
+  max-width: 900px;
+  line-height: 1.55;
+}
+
+/* Mandatory Regulatory Research Disclaimer Banner */
+.disclaimer-banner {
+  background-color: #FFFBEB !important;
+  border: 1px solid var(--amber-border) !important;
+  border-left: 4px solid var(--muted-orange) !important;
+  border-radius: 8px;
+  padding: 0.95rem 1.25rem;
+  margin-bottom: 1.4rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.disclaimer-banner .disclaimer-title {
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #92400E !important;
+  margin-bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.disclaimer-banner .disclaimer-body {
+  font-size: 0.87rem;
+  color: #78350F !important;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Metrics - Crisp White Cards (Auto-fit & No Truncation) */
+div[data-testid="stMetric"] {
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: 10px !important;
+  padding: 0.85rem 1rem !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03) !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  overflow: visible !important;
+  min-width: 0 !important;
+}
+
+div[data-testid="stMetric"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(11, 37, 69, 0.06) !important;
+}
+
+div[data-testid="stMetricLabel"] {
+  overflow: visible !important;
+  white-space: normal !important;
+}
+
+div[data-testid="stMetricLabel"] p {
+  font-size: 0.76rem !important;
+  font-weight: 700 !important;
+  color: var(--text-muted) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+  line-height: 1.25 !important;
+}
+
+div[data-testid="stMetricValue"],
+div[data-testid="stMetricValue"] > div,
+div[data-testid="stMetricValue"] span {
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+  color: var(--primary-navy) !important;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+  line-height: 1.25 !important;
+}
+
+div[data-testid="stMetricDelta"],
+div[data-testid="stMetricDelta"] > div {
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+  word-break: break-word !important;
+  font-size: 0.78rem !important;
+  line-height: 1.25 !important;
+}
+
+/* Custom Light Card Containers */
+.tecrnet-card {
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: 10px;
+  padding: 1.4rem 1.6rem;
+  margin-bottom: 1.4rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.tecrnet-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--secondary-navy) !important;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+}
+
+.tecrnet-card h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary-navy) !important;
+  margin-top: 0;
+}
+
+/* Status Badges */
+.badge {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.badge-low {
+  background-color: #ECFDF5 !important;
+  color: #065F46 !important;
+  border: 1px solid #A7F3D0 !important;
+}
+
+.badge-moderate {
+  background-color: #F0F9FF !important;
+  color: #075985 !important;
+  border: 1px solid #BAE6FD !important;
+}
+
+.badge-elevated {
+  background-color: #FFFBEB !important;
+  color: #92400E !important;
+  border: 1px solid #FDE68A !important;
+}
+
+.badge-higher {
+  background-color: #FEF2F2 !important;
+  color: #991B1B !important;
+  border: 1px solid #FECACA !important;
+}
+
+/* Tabs */
+button[data-baseweb="tab"] {
+  font-weight: 500;
+  font-size: 0.92rem;
+  color: var(--text-muted) !important;
+  padding: 0.75rem 1.25rem;
+}
+
+button[data-baseweb="tab"][aria-selected="true"] {
+  font-weight: 600;
+  color: var(--marine-teal) !important;
+  border-bottom-color: var(--marine-teal) !important;
+}
+
+/* Professional Light Sidebar */
+section[data-testid="stSidebar"] {
+  background-color: #FFFFFF !important;
+  border-right: 1px solid var(--border-light) !important;
+}
+
+section[data-testid="stSidebar"] * {
+  color: var(--text-primary) !important;
+}
+
+section[data-testid="stSidebar"] .stRadio label {
+  color: var(--text-secondary) !important;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+section[data-testid="stSidebar"] .stRadio div[role="radiogroup"] > label:hover {
+  color: var(--marine-teal) !important;
+}
+
+/* Health Badge - Clean Light Style */
+.health-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: #ECFDF5 !important;
+  border: 1px solid #A7F3D0 !important;
+  color: #065F46 !important;
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.health-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #10B981;
+}
+
+/* Section Title Headers */
+.form-section-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--secondary-navy) !important;
+  margin-top: 0.8rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Input Fields - Pure Crisp Light Mode */
+div[data-baseweb="input"] {
+  background-color: #FFFFFF !important;
+  border-color: var(--border-medium) !important;
+  color: var(--text-primary) !important;
+}
+
+input {
+  color: var(--text-primary) !important;
+  background-color: #FFFFFF !important;
+}
+
+div[data-baseweb="select"] {
+  background-color: #FFFFFF !important;
+  border-color: var(--border-medium) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Buttons */
+.stButton>button {
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+  padding: 0.5rem 1.25rem !important;
+  transition: all 0.15s ease-in-out !important;
+  border: 1px solid var(--border-medium) !important;
+  background-color: #FFFFFF !important;
+  color: var(--text-primary) !important;
+}
+
+.stButton>button:hover {
+  border-color: var(--marine-teal) !important;
+  color: var(--marine-teal) !important;
+  background-color: #F8FAFC !important;
+}
+
+.stButton>button[kind="primary"] {
+  background-color: var(--marine-teal) !important;
+  border-color: var(--marine-teal) !important;
+  color: #FFFFFF !important;
+}
+
+.stButton>button[kind="primary"]:hover {
+  background-color: var(--marine-teal-hover) !important;
+  border-color: var(--marine-teal-hover) !important;
+  box-shadow: 0 4px 12px rgba(0, 122, 120, 0.25) !important;
+}
+
+/* DataFrames */
+div[data-testid="stDataFrame"] {
+  background-color: #FFFFFF !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: 8px !important;
+}
+
+/* Code & monospace elements */
+code {
+  font-family: 'JetBrains Mono', monospace !important;
+  background-color: #F1F5F9 !important;
+  padding: 0.15rem 0.35rem !important;
+  border-radius: 4px !important;
+  font-size: 0.85em !important;
+  color: #0F172A !important;
+  border: 1px solid #E2E8F0 !important;
+}
+
+/* =====================================================================
+   Remove Streamlit Deploy Control & Interface Chrome for Clean Screenshots
+   ===================================================================== */
+.stDeployButton,
+div[data-testid="stDeployButton"],
+button[data-testid="stBaseButton-headerNoPadding"],
+div[data-testid="stToolbarActions"],
+div[data-testid="stToolbar"],
+div[data-testid="stStatusWidget"],
+div[data-testid="stDecoration"],
+#MainMenu,
+footer {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+  pointer-events: none !important;
+}
+
+header[data-testid="stHeader"] {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+}
+
+/* Ensure clean top spacing without header */
+.block-container {
+  padding-top: 1.5rem !important;
+}

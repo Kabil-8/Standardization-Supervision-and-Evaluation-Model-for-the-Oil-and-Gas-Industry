@@ -1,0 +1,10 @@
+{
+  "n_d": 24,
+  "n_a": 24,
+  "n_steps": 4,
+  "gamma": 1.7446292896672426,
+  "lambda_sparse": 2.194720937404178e-06,
+  "mask_type": "sparsemax",
+  "learning_rate": 0.005877215689803232,
+  "batch_size": 512
+}
