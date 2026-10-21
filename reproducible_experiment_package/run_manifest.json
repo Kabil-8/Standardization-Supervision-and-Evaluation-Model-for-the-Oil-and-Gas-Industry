@@ -1,0 +1,57 @@
+{
+  "timestamp": "2026-10-20T08:21:12Z",
+  "total_runtime_seconds": 535.41,
+  "environment": {
+    "python": "3.13.12 (tags/v3.13.12:1cbe481, Feb  3 2026, 18:22:25) [MSC v.1944 64 bit (AMD64)]",
+    "torch": "2.11.0+cpu",
+    "sklearn": "1.8.0",
+    "catboost": "1.2.10",
+    "lightgbm": "4.7.0",
+    "xgboost": "3.4.1",
+    "pandas": "2.2.3",
+    "numpy": "2.2.6"
+  },
+  "selected_architecture": {
+    "name": "tecr_48_bce",
+    "configuration": {
+      "name": "tecr_48_bce",
+      "hidden_size": 48,
+      "dropout": 0.2,
+      "loss": "weighted_bce"
+    },
+    "trainable_parameters": 67023,
+    "selection_criterion": "2018 AP with parsimony tie-breaker (< 0.005 AP delta)"
+  },
+  "seeds": [
+    11,
+    22,
+    33,
+    44,
+    55
+  ],
+  "protocol": {
+    "fitting_years": "2014-2017",
+    "architecture_selection_year": "2018",
+    "calibration_year": "2019",
+    "threshold_selection_year": "2020",
+    "evaluation_years": "2021-2024",
+    "evaluation_status": "development_exploratory_previously_inspected",
+    "confirmatory_untouched_trial": "UNAVAILABLE"
+  },
+  "file_hashes": {
+    "cohort_flow.csv": "41fe01a1243c0fe0c757bf99afeacc79c08e74cc5e52a6da5c63d93d7bdf461e",
+    "sequence_index.csv": "cceccc8b26c1f54a14606e8bbcb25b0a365ceea462e5dcfbabdf71651ef4ab76",
+    "split_summary.csv": "4875a3f2c6d64f7d32e146f7ee44c6112583ace863a26729b4a7f7f9469d8f4d",
+    "feature_provenance.csv": "3d4698c504d88ad5477abf5daf5b9a84f56315a8f52a8f9f6d9f42430ddc7497",
+    "protocol_comparison.csv": "c255cf4abcb4dfc67e340739de02a3ef32755198671e5d763bf88eb5d9d4fbdf",
+    "architecture_selection_trials.csv": "33138122b9586c0a8e470ca397494420f679becc07ff0c8a601f9635e5eee021",
+    "per_seed_metrics.csv": "59ecff62c2dfd9575bce5ff67a8d21b547a1bdfe37acca16ec045a5884ef9fff",
+    "ensemble_metrics.csv": "3dcb892e3d5bb6864b15cea6ff8a01b822600e27b189fc34859713ef748882fe",
+    "baseline_metrics.csv": "10109c8b26d3b6c2a1b945ffbd10cd5a2b680e375510dedfe7e6bd5fee0cf193",
+    "ablation_metrics.csv": "0987ace9ce15093ba8090c82533f7f79abedf7b06ee4ddbf494dff6ff9e1cc9c",
+    "paired_platform_bootstrap.csv": "b10db10d098f4f81c231b9b77baaaedf95a2a63041ebc865b134315af7a25244",
+    "calibration_metrics.csv": "1b6631f8d0a2be37a51e5850f0d1233507f387c167fc816033a2e51b12b98089",
+    "reliability_bins.csv": "36d669a70066fb9cfece0e943979eb259d65544c10e47b70b664d4a24dc11337",
+    "predictions.csv": "7c87e6703b51e08faf859769da9b3013aef1bd60ddc0bbcef22c29e1a7eec75d"
+  }
+}

@@ -1,0 +1,4 @@
+Feature Set,AP,ROC_AUC,F1,Brier,P@100
+Full 37-Predictor Set,0.52242,0.69898,0.55844,0.19883,0.68
+Restricted Time-Valid Set,0.51196,0.69407,0.548,0.19982,0.64
+Difference (Full - Restricted),0.01046,0.00491,0.01044,-0.00099,0.04

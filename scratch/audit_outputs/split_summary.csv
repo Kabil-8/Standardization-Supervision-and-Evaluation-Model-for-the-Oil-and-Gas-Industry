@@ -1,0 +1,5 @@
+role,sequences,positives,prevalence,year_min,year_max
+calibration,3545,976,0.2753173483779972,2020,2021
+exploratory_previously_inspected,4737,1546,0.3263668988811484,2022,2024
+inner_fit,9449,2267,0.239919568208276,2014,2017
+inner_tuning,3884,852,0.21936148300720906,2018,2019

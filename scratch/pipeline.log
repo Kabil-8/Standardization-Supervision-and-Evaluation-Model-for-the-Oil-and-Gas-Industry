@@ -1,0 +1,86 @@
+2026-10-20 13:25:30,584 [INFO] Starting TECR-Net End-to-End Scientific Rerun...
+2026-10-20 13:25:30,584 [INFO] === PHASE 1 & 2: DATASET RECONCILIATION & FEATURE PROVENANCE ===
+2026-10-20 13:25:30,661 [INFO] Loaded annual risk set: 31065 rows, 3464 platforms
+2026-10-20 13:25:31,223 [INFO] Merged static structure attributes. Total columns: 46
+2026-10-20 13:25:31,291 [INFO] Verified: 29,014 platform-years across 3,172 unique platforms.
+2026-10-20 13:25:32,081 [INFO] Verified: 22,957 calendar-exact histories and 21,615 modeling sequences.
+2026-10-20 13:25:32,126 [INFO] Split summary:
+            split_role feature_years  n_sequences  n_platforms  n_positives  prevalence
+               fitting     2014-2017         9449         2646         2267    0.239920
+architecture_selection     2018-2018         2009         2009          555    0.276257
+           calibration     2019-2019         1875         1875          297    0.158400
+   threshold_selection     2020-2020         1790         1790          501    0.279888
+            evaluation     2021-2024         6492         1759         2021    0.311306
+2026-10-20 13:25:32,129 [INFO] Feature provenance dictionary written (37 audited predictors).
+2026-10-20 13:25:32,208 [INFO] Vectorized transformation of sequences...
+2026-10-20 13:25:32,478 [INFO] Cached preprocessed tensors to scratch\cache_tensors.joblib
+2026-10-20 13:25:32,479 [INFO] Input tensors: X_d=(21615, 3, 23), X_s=(21615, 3), X_c=(21615, 8), y=(21615,)
+2026-10-20 13:25:32,479 [INFO] === PHASE 3: ARCHITECTURE & HYPERPARAMETER INVESTIGATION (2018 SELECTION) ===
+2026-10-20 13:25:45,763 [INFO] Architecture Trial Hidden 48 -> 2018 AP: 0.57045
+2026-10-20 13:25:58,274 [INFO] Architecture Trial Hidden 64 -> 2018 AP: 0.57288
+2026-10-20 13:26:15,210 [INFO] Architecture Trial Hidden 80 (Manuscript) -> 2018 AP: 0.56623
+2026-10-20 13:26:36,101 [INFO] Architecture Trial Hidden 96 -> 2018 AP: 0.57051
+2026-10-20 13:26:53,545 [INFO] Architecture Trial Loss: Weighted BCE -> 2018 AP: 0.57223
+2026-10-20 13:27:19,323 [INFO] Architecture Trial Loss: Standard BCE -> 2018 AP: 0.59179
+2026-10-20 13:27:46,393 [INFO] Architecture Trial Fusion: Gated Residual -> 2018 AP: 0.58437
+2026-10-20 13:28:09,494 [INFO] Architecture Trial Fusion: Concat Tokens -> 2018 AP: 0.59002
+2026-10-20 13:28:35,259 [INFO] Architecture Trial Fusion: Pure MHA -> 2018 AP: 0.57571
+2026-10-20 13:28:35,264 [INFO] === PHASE 4: TRAINING PROPOSED 80-UNIT TECR-NET ACROSS 7 SEEDS ===
+2026-10-20 13:28:35,264 [INFO] Training TECR-Net Seed 11...
+2026-10-20 13:29:09,650 [INFO] Training TECR-Net Seed 22...
+2026-10-20 13:29:38,689 [INFO] Training TECR-Net Seed 33...
+2026-10-20 13:30:05,075 [INFO] Training TECR-Net Seed 44...
+2026-10-20 13:30:31,020 [INFO] Training TECR-Net Seed 55...
+2026-10-20 13:30:58,338 [INFO] Training TECR-Net Seed 66...
+2026-10-20 13:31:25,496 [INFO] Training TECR-Net Seed 77...
+2026-10-20 13:31:53,805 [INFO] 7-Seed Evaluation AP (Mean ± SD): 0.48037 ± 0.01007
+2026-10-20 13:31:54,407 [INFO] Ensemble Evaluation AP: 0.48913, ROC: 0.68537, F1: 0.53149
+2026-10-20 13:31:54,408 [INFO] === PHASE 4: BASELINE BENCHMARK ON IDENTICAL EVALUATION ROWS ===
+2026-10-20 13:31:54,442 [INFO] Training Plain BiGRU...
+2026-10-20 13:32:09,322 [INFO] Training Simple Concatenation MLP...
+2026-10-20 13:32:15,831 [INFO] Fitting Baseline Logistic Regression...
+2026-10-20 13:32:17,251 [INFO] Fitting Baseline HistGradientBoosting...
+2026-10-20 13:32:20,687 [INFO] Fitting Baseline XGBoost...
+2026-10-20 13:32:21,442 [INFO] Fitting Baseline LightGBM...
+2026-10-20 13:32:22,005 [INFO] Fitting Baseline CatBoost...
+2026-10-20 13:32:24,328 [INFO] Baseline Benchmark:
+                      model  average_precision  roc_auc       f1    brier  precision_at_50  precision_at_100
+   Simple Concatenation MLP           0.501039 0.691280 0.527833 0.220995             0.70              0.70
+        Logistic Regression           0.499949 0.704975 0.548099 0.226289             0.64              0.66
+                Plain BiGRU           0.493674 0.700470 0.538875 0.221811             0.64              0.61
+TECR-Net (80-Unit Ensemble)           0.489128 0.685370 0.531491 0.224910             0.70              0.71
+                   LightGBM           0.479017 0.684711 0.528569 0.227962             0.70              0.63
+                   CatBoost           0.477521 0.683789 0.532551 0.226721             0.70              0.65
+                    XGBoost           0.475434 0.684719 0.537998 0.228488             0.64              0.57
+       HistGradientBoosting           0.464211 0.675495 0.519637 0.230279             0.62              0.58
+           Persistence Rule           0.377620 0.607148 0.464371 0.259358             0.40              0.46
+2026-10-20 13:32:24,329 [INFO] === PHASE 5: ARCHITECTURAL ABLATION MATRIX ===
+2026-10-20 13:32:24,329 [INFO] Training Ablation Full TECR-Net (80-Unit)...
+2026-10-20 13:32:42,601 [INFO] Training Ablation No Feature Gate...
+2026-10-20 13:33:01,316 [INFO] Training Ablation No Temporal Attention...
+2026-10-20 13:33:19,619 [INFO] Training Ablation No Cross-Modal Attention...
+2026-10-20 13:33:35,690 [INFO] Training Ablation No Residual Mean Fusion...
+2026-10-20 13:33:56,447 [INFO] Ablation Results:
+                 variant  average_precision  roc_auc       f1    brier  precision_at_100
+ Full TECR-Net (80-Unit)           0.494930 0.690851 0.541762 0.222834              0.69
+         No Feature Gate           0.474539 0.684817 0.528516 0.224083              0.52
+   No Temporal Attention           0.480501 0.676153 0.524200 0.228059              0.70
+No Cross-Modal Attention           0.494557 0.685216 0.533234 0.224843              0.71
+ No Residual Mean Fusion           0.488219 0.686314 0.545024 0.226517              0.69
+    Simple Concatenation           0.501039 0.691280 0.527833 0.220995              0.70
+2026-10-20 13:33:56,448 [INFO] === RESTRICTED TIME-VALID FEATURE EXPERIMENT ===
+2026-10-20 13:34:16,900 [INFO] === PHASE 6: CALIBRATION & PAIRED BOOTSTRAP UNCERTAINTY ===
+2026-10-20 13:34:16,907 [INFO] Running 1,000 platform-clustered bootstrap replicates...
+2026-10-20 13:34:34,120 [INFO] Bootstrap CIs:
+                                                comparison  observed_delta_ap  ci_95_lower  ci_95_upper  p_delta_greater_zero
+                          TECR-Net Ensemble minus CatBoost           0.011607    -0.000320     0.022357                 0.972
+                          TECR-Net Ensemble minus LightGBM           0.010110    -0.003336     0.022783                 0.936
+                           TECR-Net Ensemble minus XGBoost           0.013694     0.000883     0.026838                 0.981
+              TECR-Net Ensemble minus HistGradientBoosting           0.024917     0.011835     0.037567                 1.000
+               TECR-Net Ensemble minus Logistic Regression          -0.010821    -0.022137    -0.000729                 0.020
+                       TECR-Net Ensemble minus Plain BiGRU          -0.004547    -0.016115     0.005893                 0.212
+                  TECR-Net Ensemble minus Persistence Rule           0.111508     0.091018     0.131461                 1.000
+         TECR-Net Ensemble minus Ablation: No Feature Gate           0.014588     0.003533     0.024680                 0.997
+TECR-Net Ensemble minus Ablation: No Cross-Modal Attention          -0.005430    -0.012055     0.001514                 0.065
+ TECR-Net Ensemble minus Ablation: No Residual Mean Fusion           0.000909    -0.004727     0.006503                 0.612
+     TECR-Net Ensemble minus Restricted Time-Valid Profile           0.012620     0.004548     0.021695                 0.997

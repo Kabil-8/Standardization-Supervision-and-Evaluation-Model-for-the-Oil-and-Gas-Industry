@@ -1,0 +1,14 @@
+stage,count,unit
+Total Structure Registry Records,7091,structures
+Structures with Known Installation Date,7091,structures
+Annual Risk Set (2011-2024),31065,platform-years
+Active Platform Cohort (2012-2024 Footprint),29014,platform-years
+Unique Platforms in Active Cohort,3172,unique platforms
+Zero-Production Platform-Years Retained,8562,platform-years
+Eligible Calendar-Exact 3-Year Histories,22957,histories
+Modeling Sequences (2014-2024),21615,sequences
+  - Fitting Split (2014-2017),9449,sequences
+  - Architecture Selection (2018),2009,sequences
+  - Calibration Split (2019),1875,sequences
+  - Threshold Selection (2020),1790,sequences
+  - Development Evaluation (2021-2024),6492,sequences

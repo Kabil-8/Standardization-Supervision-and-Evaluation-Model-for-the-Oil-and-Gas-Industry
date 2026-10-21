@@ -1,0 +1,98 @@
+2026-10-20 13:42:17,563 [INFO] === STARTING SIMPLIFIED TECR-NET SCIENTIFIC RE-RUN ===
+2026-10-20 13:42:17,568 [INFO] Loaded tensors: X_d=(21615, 3, 23), X_s=(21615, 3), X_c=(21615, 8), y=(21615,), cat_cards=[12, 4, 7, 4, 4, 4, 37, 3]
+2026-10-20 13:42:17,589 [INFO] === PHASE 3: 2018 ARCHITECTURE SELECTION ACROSS 5 SEEDS ===
+2026-10-20 13:42:27,617 [INFO] Config tecr_48_bce | Seed 11 -> 2018 AP: 0.55196
+2026-10-20 13:42:36,323 [INFO] Config tecr_48_bce | Seed 22 -> 2018 AP: 0.54191
+2026-10-20 13:42:45,381 [INFO] Config tecr_48_bce | Seed 33 -> 2018 AP: 0.54365
+2026-10-20 13:42:54,588 [INFO] Config tecr_48_bce | Seed 44 -> 2018 AP: 0.53989
+2026-10-20 13:43:03,842 [INFO] Config tecr_48_bce | Seed 55 -> 2018 AP: 0.55713
+2026-10-20 13:43:03,845 [INFO] Summary tecr_48_bce -> Mean 2018 AP: 0.54691 ± 0.00656 (Params: 67023)
+2026-10-20 13:43:13,858 [INFO] Config tecr_64_bce | Seed 11 -> 2018 AP: 0.54741
+2026-10-20 13:43:23,943 [INFO] Config tecr_64_bce | Seed 22 -> 2018 AP: 0.55351
+2026-10-20 13:43:33,987 [INFO] Config tecr_64_bce | Seed 33 -> 2018 AP: 0.54233
+2026-10-20 13:43:43,950 [INFO] Config tecr_64_bce | Seed 44 -> 2018 AP: 0.54297
+2026-10-20 13:43:54,392 [INFO] Config tecr_64_bce | Seed 55 -> 2018 AP: 0.54718
+2026-10-20 13:43:54,392 [INFO] Summary tecr_64_bce -> Mean 2018 AP: 0.54668 ± 0.00400 (Params: 100175)
+2026-10-20 13:44:04,828 [INFO] Config tecr_64_focal | Seed 11 -> 2018 AP: 0.54585
+2026-10-20 13:44:15,155 [INFO] Config tecr_64_focal | Seed 22 -> 2018 AP: 0.55634
+2026-10-20 13:44:25,637 [INFO] Config tecr_64_focal | Seed 33 -> 2018 AP: 0.54022
+2026-10-20 13:44:35,878 [INFO] Config tecr_64_focal | Seed 44 -> 2018 AP: 0.54218
+2026-10-20 13:44:46,238 [INFO] Config tecr_64_focal | Seed 55 -> 2018 AP: 0.55031
+2026-10-20 13:44:46,238 [INFO] Summary tecr_64_focal -> Mean 2018 AP: 0.54698 ± 0.00581 (Params: 100175)
+2026-10-20 13:44:56,601 [INFO] Config tecr_64_focal_regularized | Seed 11 -> 2018 AP: 0.54348
+2026-10-20 13:45:06,984 [INFO] Config tecr_64_focal_regularized | Seed 22 -> 2018 AP: 0.53792
+2026-10-20 13:45:18,278 [INFO] Config tecr_64_focal_regularized | Seed 33 -> 2018 AP: 0.55054
+2026-10-20 13:45:28,490 [INFO] Config tecr_64_focal_regularized | Seed 44 -> 2018 AP: 0.54296
+2026-10-20 13:45:39,361 [INFO] Config tecr_64_focal_regularized | Seed 55 -> 2018 AP: 0.54891
+2026-10-20 13:45:39,361 [INFO] Summary tecr_64_focal_regularized -> Mean 2018 AP: 0.54476 ± 0.00452 (Params: 100175)
+2026-10-20 13:45:50,251 [INFO] Config tecr_80_bce | Seed 11 -> 2018 AP: 0.54438
+2026-10-20 13:46:02,489 [INFO] Config tecr_80_bce | Seed 22 -> 2018 AP: 0.53980
+2026-10-20 13:46:14,624 [INFO] Config tecr_80_bce | Seed 33 -> 2018 AP: 0.54936
+2026-10-20 13:46:27,202 [INFO] Config tecr_80_bce | Seed 44 -> 2018 AP: 0.54215
+2026-10-20 13:46:43,128 [INFO] Config tecr_80_bce | Seed 55 -> 2018 AP: 0.54800
+2026-10-20 13:46:43,128 [INFO] Summary tecr_80_bce -> Mean 2018 AP: 0.54474 ± 0.00355 (Params: 138959)
+2026-10-20 13:46:43,139 [INFO] Architecture Search Results:
+                        name  parameters  mean_2018_ap  std_2018_ap
+0              tecr_64_focal      100175      0.546980     0.005811
+1                tecr_48_bce       67023      0.546907     0.006557
+2                tecr_64_bce      100175      0.546678     0.004004
+3  tecr_64_focal_regularized      100175      0.544761     0.004523
+4                tecr_80_bce      138959      0.544739     0.003555
+2026-10-20 13:46:43,146 [INFO] >>> SELECTED CONFIGURATION BY 2018 RULE: tecr_48_bce (Mean AP: 0.54691, Params: 67023) <<<
+2026-10-20 13:46:43,146 [INFO] === PHASE 4: FINAL TRAINING OF SELECTED tecr_48_bce ACROSS 5 SEEDS ===
+2026-10-20 13:48:04,559 [INFO] 5-Seed Individual AP (Mean ± SD): 0.46848 ± 0.01010
+2026-10-20 13:48:04,560 [INFO] === ENSEMBLE LEVEL CALIBRATION (AVERAGING RAW LOGITS) ===
+2026-10-20 13:48:04,674 [INFO] Ensemble Selected Operating Threshold (from 2020 F1): 0.051118
+2026-10-20 13:48:04,692 [INFO] Ensemble Eval AP: 0.47410, ROC: 0.67742, F1: 0.51751, P@50: 0.72, P@100: 0.66
+2026-10-20 13:48:04,693 [INFO] === PHASE 4: SYMMETRIC BASELINE BENCHMARK ON IDENTICAL EVALUATION ROWS ===
+2026-10-20 13:48:04,711 [INFO] Training Plain BiGRU across 5 seeds...
+2026-10-20 13:48:39,191 [INFO] Training Simple Concatenation MLP across 5 seeds...
+2026-10-20 13:49:01,604 [INFO] Fitting Tabular Baseline: Logistic Regression...
+2026-10-20 13:49:02,854 [INFO] Fitting Tabular Baseline: HistGradientBoosting...
+2026-10-20 13:49:06,123 [INFO] Fitting Tabular Baseline: XGBoost...
+2026-10-20 13:49:07,663 [INFO] Fitting Tabular Baseline: LightGBM...
+2026-10-20 13:49:08,556 [INFO] Fitting Tabular Baseline: CatBoost...
+2026-10-20 13:49:12,127 [INFO] Baseline Benchmark Summary:
+                                        model  average_precision   roc_auc        f1  precision_at_50  precision_at_100
+0                    Simple Concatenation MLP           0.501064  0.695880  0.539021             0.70              0.65
+1                         Logistic Regression           0.499949  0.704975  0.548099             0.64              0.66
+2                                 Plain BiGRU           0.495437  0.699448  0.535124             0.62              0.63
+3                                    LightGBM           0.479017  0.684711  0.528569             0.70              0.63
+4                                    CatBoost           0.477521  0.683789  0.532551             0.70              0.65
+5                                     XGBoost           0.475434  0.684719  0.537998             0.64              0.57
+6  Simplified TECR-Net (tecr_48_bce Ensemble)           0.474098  0.677423  0.517510             0.72              0.66
+7                        HistGradientBoosting           0.464211  0.675495  0.519637             0.62              0.58
+8                            Persistence Rule           0.377620  0.607148  0.464371             0.40              0.46
+2026-10-20 13:49:12,127 [INFO] === PHASE 5: ARCHITECTURAL ABLATION MATRIX (SIMPLIFIED MODEL) ===
+2026-10-20 13:49:12,127 [INFO] Training Ablation: Full Simplified TECR-Net...
+2026-10-20 13:49:28,260 [INFO] Training Ablation: Without Temporal Attention...
+2026-10-20 13:49:45,556 [INFO] Training Ablation: Without Residual Fusion...
+2026-10-20 13:50:01,756 [INFO] Training Ablation: Without Static Branch...
+2026-10-20 13:50:18,065 [INFO] Training Ablation: Without Categorical Branch...
+2026-10-20 13:50:34,801 [INFO] Ablation Results Summary:
+                      variant  average_precision   roc_auc        f1  precision_at_100
+0    Simple Concatenation MLP           0.501064  0.695880  0.539021              0.65
+1  Without Categorical Branch           0.490570  0.687050  0.529266              0.73
+2     Without Residual Fusion           0.480525  0.678918  0.525418              0.71
+3  Without Temporal Attention           0.479448  0.680683  0.530684              0.71
+4       Without Static Branch           0.479327  0.678014  0.519231              0.72
+5    Full Simplified TECR-Net           0.474427  0.680504  0.532651              0.67
+2026-10-20 13:50:34,801 [INFO] === RESTRICTED TIME-VALID PREDICTOR SENSITIVITY ===
+2026-10-20 13:50:55,045 [INFO] === PHASE 6: CALIBRATION & RELIABILITY BINS ===
+2026-10-20 13:50:55,056 [INFO] === PHASE 6: 1,000 PLATFORM-CLUSTERED BOOTSTRAP REPLICATES ===
+2026-10-20 13:51:12,895 [INFO] Bootstrap Paired Intervals:
+                                                        comparison  observed_delta_ap  ci_95_lower  ci_95_upper  p_delta_greater_zero
+0                               Simplified TECR-Net minus CatBoost          -0.003422    -0.017649     0.008886                 0.283
+1                               Simplified TECR-Net minus LightGBM          -0.004919    -0.021051     0.009764                 0.248
+2                                Simplified TECR-Net minus XGBoost          -0.001336    -0.016315     0.012749                 0.380
+3                   Simplified TECR-Net minus HistGradientBoosting           0.009888    -0.005287     0.024120                 0.902
+4                    Simplified TECR-Net minus Logistic Regression          -0.025850    -0.041322    -0.011886                 0.000
+5                            Simplified TECR-Net minus Plain BiGRU          -0.021338    -0.035624    -0.008558                 0.001
+6               Simplified TECR-Net minus Simple Concatenation MLP          -0.026966    -0.044433    -0.011464                 0.000
+7                       Simplified TECR-Net minus Persistence Rule           0.096478     0.076541     0.117419                 1.000
+8   Simplified TECR-Net minus Ablation: Without Temporal Attention          -0.005350    -0.013156     0.002509                 0.097
+9      Simplified TECR-Net minus Ablation: Without Residual Fusion          -0.006427    -0.014177     0.000527                 0.038
+10       Simplified TECR-Net minus Ablation: Without Static Branch          -0.005229    -0.015062     0.003670                 0.124
+11  Simplified TECR-Net minus Ablation: Without Categorical Branch          -0.016472    -0.027763    -0.004785                 0.001
+12         Simplified TECR-Net minus Restricted Time-Valid Profile           0.012713     0.002668     0.022265                 0.995
+2026-10-20 13:51:12,977 [INFO] === COMPLETED: All deliverables and manifest saved under reproducible_experiment_package ===

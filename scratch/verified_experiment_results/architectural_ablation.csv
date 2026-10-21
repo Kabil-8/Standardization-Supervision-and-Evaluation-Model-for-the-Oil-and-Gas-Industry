@@ -1,0 +1,7 @@
+Variant,AP,ROC_AUC,F1,Brier,P@100
+Full TECR-Net (80-Unit),0.50378,0.6893,0.54848,0.20103,0.64
+Ablation: No Feature Gate,0.51598,0.68985,0.54363,0.20028,0.74
+Ablation: No Temporal Attention,0.50307,0.69326,0.54844,0.20106,0.62
+Ablation: No Cross-Modal Attention,0.52246,0.70132,0.55956,0.19883,0.73
+Ablation: No Residual Mean Fusion,0.50152,0.69058,0.54428,0.20079,0.61
+Ablation: Simple Feature Concatenation,0.51233,0.69509,0.5424,0.2,0.62

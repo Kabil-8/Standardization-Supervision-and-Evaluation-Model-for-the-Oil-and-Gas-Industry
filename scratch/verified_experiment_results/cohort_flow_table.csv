@@ -1,0 +1,10 @@
+Stage / Metric,Count,Scope
+Total Candidate Platform-Years,29014,Active offshore platforms (2011-2024)
+Unique Offshore Platforms,3172,Documented GOM structures
+Calendar-Exact 3-Year Histories,22957,"Complete t-2, t-1, t sequences without gaps"
+Zero-Production Platform-Years,8562,Retained without future survivorship filter
+Modeling Sequences (2014-2024),21615,Exact chronological evaluation sequences
+  - Inner Fit (2014-2017),9449,"2,267 recorded INCs (23.99% prevalence)"
+  - Inner Tuning (2018-2019),3884,852 recorded INCs (21.94% prevalence)
+  - Calibration / Dev (2020-2021),3545,976 recorded INCs (27.53% prevalence)
+  - Prospective Exploratory (2022-2024),4737,"1,546 recorded INCs (32.64% prevalence)"

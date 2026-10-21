@@ -1,0 +1,7 @@
+Item,Notebook Pipeline,Corrected Panel,Discrepancy / Root Cause
+Candidate Platform-Years,"27,672 (2012-2024)","29,014 (incl. 1,342 anchors)",Exclusion of 2011 anchor years in notebook
+Unique Offshore Platforms,"3,172","3,172",Identical active platform footprint verified
+Calendar-Exact 3-Yr Histories,"21,615 (2014-2024)","22,957 (incl. 2013 window)","1,342 3-year sequences starting in 2011 (t=2013)"
+Zero-Production Platform-Years,"8,562","8,562",Non-producing platforms retained (no future survivorship bias)
+Date Parsing Errors,127 mixed-format errors,0 (mixed parser applied),Fixed using format='mixed' date parsing
+Negative Label Ascertainment,Treated as zero,Explicit administrative proxy,"Label = recorded INC notice, not true absence of violation"

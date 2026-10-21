@@ -1,0 +1,5 @@
+Comparison,Observed Delta AP,Bootstrap Mean Delta AP,95% CI Lower,95% CI Upper,P(Delta AP > 0)
+TECR-Net vs CatBoost,+0.03243,+0.03215,+0.00942,+0.05618,0.998
+TECR-Net vs HistGradientBoosting,+0.03006,+0.02988,+0.00684,+0.05312,0.994
+TECR-Net vs LightGBM,+0.02908,+0.02891,+0.00512,+0.05244,0.991
+TECR-Net vs Logistic Regression,-0.00494,-0.00481,-0.02840,+0.01825,0.342

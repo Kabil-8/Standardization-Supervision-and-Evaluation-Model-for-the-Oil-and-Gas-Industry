@@ -1,0 +1,7 @@
+dimension,archived_pipeline,corrected_protocol
+Cohort Filter,Required production row in t+1 (survivorship bias),"Includes zero-production platform-years (22,957 histories)"
+Split Allocation,Adaptive reuse of 2020-2021 for tuning & reporting,"Strict non-overlapping roles: Fit (2014-17), Tune (2018), Cal (2019), Thresh (2020), Eval (2021-24)"
+Final Cohort Status,Claimed prospective generalization on 2022-2024,Explicitly labelled development/exploratory (previously inspected)
+Baseline Symmetry,Disparate tuning trials and asymmetric rows,"Identical 6,492 evaluation rows, common tuning budget, seven seeds"
+Negative Labels,Treated as verified absence of violation,Documented as administrative non-recording (provisional negative)
+Feature Leakage,Static attributes assumed known at forecast origin,Full vs. restricted time-valid sensitivity experiment documented

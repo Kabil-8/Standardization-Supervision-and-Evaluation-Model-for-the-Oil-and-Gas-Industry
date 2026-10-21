@@ -1,0 +1,3 @@
+Cohort,Brier Score,Brier Skill Score,Observed Prevalence,Mean Predicted Probability
+Development / Calibration (2020-2021),0.1762,+0.01850,0.27532,0.2761
+Prospective Exploratory (2022-2024),0.19883,+0.09570,0.32637,0.3284
